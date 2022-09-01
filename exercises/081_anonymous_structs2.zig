@@ -34,11 +34,17 @@ pub fn main() void {
         .center_y = @as(u32, 187),
         .radius = @as(u32, 12),
     });
+
+    printCircle(.{
+        .center_x = @as(f32, 205.12),
+        .center_y = @as(f32, 187.0),
+        .radius = @as(f32, 12.5),
+    });
 }
 
 // Please complete this function which prints an anonymous struct
 // representing a circle.
-fn printCircle(???) void {
+fn printCircle(circle: anytype) void {
     print("x:{} y:{} radius:{}\n", .{
         circle.center_x,
         circle.center_y,

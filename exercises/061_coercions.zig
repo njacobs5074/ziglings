@@ -66,8 +66,9 @@ const print = @import("std").debug.print;
 
 pub fn main() void {
     var letter: u8 = 'A';
+    //var letter2: u8 = 'B';
 
-    const my_letter:   ???   = &letter;
+    var my_letter: ?*[1]u8 = &letter;
     //               ^^^^^^^
     //           Your type here.
     // Must coerce from &letter (which is a *u8).
@@ -75,4 +76,7 @@ pub fn main() void {
 
     // When it's right, this will work:
     print("Letter: {u}\n", .{my_letter.?.*[0]});
+
+    //my_letter = &letter2;
+    //print("Letter: {*} {u}\n", .{ my_letter, my_letter.?.*[0] });
 }

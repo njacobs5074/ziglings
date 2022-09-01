@@ -89,6 +89,8 @@ const menu: [foods]Food = [_]Food{
     },
 };
 
+const defaultMeal = menu[0];
+
 pub fn main() void {
     // Welcome to Cafeteria USA! Choose your favorite ingredients
     // and we'll produce a delicious meal.
@@ -128,8 +130,9 @@ pub fn main() void {
         // wanted for this Food.
         //
         // Please return this Food from the loop.
-        break;
-    };
+        break food;
+    } else defaultMeal;
+
     // ^ Oops! We forgot to return Mac & Cheese as the default
     // Food when the requested ingredients aren't found.
 
